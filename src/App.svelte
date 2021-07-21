@@ -1,6 +1,16 @@
 <script>
-  let name = "Rep";
+  let firstName = "Rizqy";
+  let lastName = "EP";
   let beltColour = "Black";
+
+  //Declaration below are reactive values example
+  $: fullName = `${firstName} ${lastName}`;
+
+  //Reactive Statements (Code Blocks will react if values inside it changed or altered)
+  $: {
+    console.log(beltColour);
+    console.log(fullName);
+  }
 
   const handleClick = () => {
     if (beltColour == "Black") {
@@ -16,15 +26,9 @@
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Belt Colour : {beltColour}
-  </p>
-  <button on:click={handleClick}>Update Belt Colour</button>
-  <!-- <input type="text" on:input={handleInput} value={beltColour} /> -->
-
-  <!-- Two Way Binding ShortCut -->
-
+  <p>{fullName} {beltColour} Belt</p>
+  <input type="text" bind:value={firstName} />
+  <input type="text" bind:value={lastName} />
   <input type="text" bind:value={beltColour} />
 </main>
 
