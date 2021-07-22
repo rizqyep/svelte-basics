@@ -15,7 +15,7 @@
   let num = 70;
 </script>
 
-<Modal content="This is a prop named content" />
+<Modal content="This is a prop named content" isPromo={true} />
 <main>
   {#if num > 20}
     <p>Greater than 20</p>
