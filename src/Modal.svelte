@@ -6,6 +6,8 @@
 </script>
 
 {#if showModal}
+  <!-- Plain on click will forward the event into function defined in root
+    component -->
   <div class="backdrop" on:click>
     <div class="modal" class:promo={isPromo}>
       <p>{content}</p>
