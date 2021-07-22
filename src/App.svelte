@@ -10,9 +10,16 @@
       return person.id != id;
     });
   };
+
+  let num = 70;
 </script>
 
 <main>
+  {#if num > 20}
+    <p>Greater than 20</p>
+  {:else if num > 5}
+    <p>Greater than 5</p>
+  {/if}
   {#each people as person (person.id)}
     <div class="card">
       <h4>{person.name}</h4>
