@@ -4,6 +4,12 @@
     { name: "Ipul", beltColour: "Orange", age: 21, id: 2 },
     { name: "Sesar", beltColour: "Brown", age: 21, id: 3 },
   ];
+
+  const deletePerson = (id) => {
+    people = people.filter((person) => {
+      return person.id != id;
+    });
+  };
 </script>
 
 <main>
@@ -12,6 +18,12 @@
       <h4>{person.name}</h4>
       <p>{person.beltColour}</p>
       <p>{person.age}</p>
+
+      <button
+        on:click={() => {
+          deletePerson(person.id);
+        }}>Delete</button
+      >
     </div>
   {/each}
 </main>
