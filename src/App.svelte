@@ -19,7 +19,12 @@
   };
 </script>
 
-<Modal {showModal} content="This is a prop named content" isPromo={true} />
+<Modal
+  {showModal}
+  content="This is a prop named content"
+  isPromo={true}
+  on:click={toggleModal}
+/>
 <main>
   <button on:click={toggleModal}>Open Modal</button>
   {#if num > 20}
