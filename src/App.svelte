@@ -1,4 +1,5 @@
 <script>
+  import AddPersonForm from "./AddPersonForm.svelte";
   import Modal from "./Modal.svelte";
   let people = [
     { name: "Abek", beltColour: "Black", age: 21, id: 1 },
@@ -24,16 +25,7 @@
   content="This is a prop named content"
   on:click={toggleModal}
 >
-  <div slot="title">
-    <h3>Add A New Person</h3>
-  </div>
-  <div slot="content">
-    <form>
-      <input type="text" placeholder="name" />
-      <input type="text" placeholder="belt" />
-      <button>Add Person</button>
-    </form>
-  </div>
+  <AddPersonForm />
 </Modal>
 <main>
   <button on:click={toggleModal}>Open Modal</button>
