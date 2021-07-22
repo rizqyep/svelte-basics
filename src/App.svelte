@@ -22,7 +22,6 @@
 <Modal
   {showModal}
   content="This is a prop named content"
-  isPromo={true}
   on:click={toggleModal}
 />
 <main>

@@ -1,4 +1,10 @@
 <script>
+  //List of Events Modifier :
+
+  //Once : this will only fire once
+  //preventDefault : prevent default action or behavior
+  // self : only fires event if the clicked element is the target
+
   export let content;
 
   export let showModal = false;
@@ -8,7 +14,7 @@
 {#if showModal}
   <!-- Plain on click will forward the event into function defined in root
     component -->
-  <div class="backdrop" on:click>
+  <div class="backdrop" on:click|self>
     <div class="modal" class:promo={isPromo}>
       <p>{content}</p>
     </div>
