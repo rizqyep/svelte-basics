@@ -14,7 +14,8 @@
     component -->
   <div class="backdrop" on:click|self>
     <div class="modal" class:promo={isPromo}>
-      <slot />
+      <slot name="title" />
+      <slot name="content" />
     </div>
   </div>
 {/if}

@@ -24,12 +24,16 @@
   content="This is a prop named content"
   on:click={toggleModal}
 >
-  <h3>Add A New Person</h3>
-  <form>
-    <input type="text" placeholder="name" />
-    <input type="text" placeholder="belt" />
-    <button>Add Person</button>
-  </form>
+  <div slot="title">
+    <h3>Add A New Person</h3>
+  </div>
+  <div slot="content">
+    <form>
+      <input type="text" placeholder="name" />
+      <input type="text" placeholder="belt" />
+      <button>Add Person</button>
+    </form>
+  </div>
 </Modal>
 <main>
   <button on:click={toggleModal}>Open Modal</button>
