@@ -23,7 +23,14 @@
   {showModal}
   content="This is a prop named content"
   on:click={toggleModal}
-/>
+>
+  <h3>Add A New Person</h3>
+  <form>
+    <input type="text" placeholder="name" />
+    <input type="text" placeholder="belt" />
+    <button>Add Person</button>
+  </form>
+</Modal>
 <main>
   <button on:click={toggleModal}>Open Modal</button>
   {#if num > 20}
