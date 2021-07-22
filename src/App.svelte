@@ -11,12 +11,17 @@
       return person.id != id;
     });
   };
-
+  let showModal = false;
   let num = 70;
+
+  const toggleModal = () => {
+    showModal = !showModal;
+  };
 </script>
 
-<Modal content="This is a prop named content" isPromo={true} />
+<Modal {showModal} content="This is a prop named content" isPromo={true} />
 <main>
+  <button on:click={toggleModal}>Open Modal</button>
   {#if num > 20}
     <p>Greater than 20</p>
   {:else if num > 5}
