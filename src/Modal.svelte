@@ -5,8 +5,6 @@
   //preventDefault : prevent default action or behavior
   // self : only fires event if the clicked element is the target
 
-  export let content;
-
   export let showModal = false;
   export let isPromo = false;
 </script>
@@ -16,7 +14,7 @@
     component -->
   <div class="backdrop" on:click|self>
     <div class="modal" class:promo={isPromo}>
-      <p>{content}</p>
+      <slot />
     </div>
   </div>
 {/if}
