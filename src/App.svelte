@@ -1,4 +1,5 @@
 <script>
+  import Modal from "./Modal.svelte";
   let people = [
     { name: "Abek", beltColour: "Black", age: 21, id: 1 },
     { name: "Ipul", beltColour: "Orange", age: 21, id: 2 },
@@ -14,6 +15,7 @@
   let num = 70;
 </script>
 
+<Modal />
 <main>
   {#if num > 20}
     <p>Greater than 20</p>
